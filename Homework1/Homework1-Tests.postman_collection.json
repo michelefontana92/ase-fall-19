@@ -1,0 +1,1771 @@
+{
+	"info": {
+		"_postman_id": "f5bb3a35-b513-4b74-819c-bedde873402b",
+		"name": "Homework1-Tests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "1-No Quizzes ",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "5578f837-948e-4558-a9d6-b7796f966d6d",
+						"exec": [
+							"pm.test(\"At the beginning there aren't loaded quizzes\",function()",
+							"{",
+							"    var jsonData = pm.response.json();",
+							"\tpm.expect(jsonData.loaded_quizzes).to.eql(0);",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/quizzes/loaded",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"quizzes",
+						"loaded"
+					]
+				},
+				"description": "At the beginning there aren't quizzes loaded in the system"
+			},
+			"response": []
+		},
+		{
+			"name": "2-Create the first quiz",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "aacb5cde-408d-4ea7-a7b5-0befa9bb11b8",
+						"exec": [
+							"pm.test(\"Create the first quiz\",function()",
+							"{",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.quiznumber).eql(0);",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"questions\": [\n        {\n            \"question\": \"What's the answer to all questions?\",\n            \"answers\": [\n                {\n                    \"answer\": \"33\",\n                    \"correct\": 0\n                },\n                {\n                    \"answer\": \"42\",\n                    \"correct\": 1\n                },\n                {\n                    \"answer\": \"1\",\n                    \"correct\": 0\n                }\n            ]\n        },\n        {\n            \"question\": \"What's the answer to all questions?\",\n            \"answers\": [\n                {\n                    \"answer\": \"33\",\n                    \"correct\": 0\n                },\n                {\n                    \"answer\": \"42\",\n                    \"correct\": 1\n                },\n                {\n                    \"answer\": \"1\",\n                    \"correct\": 0\n                }\n            ]\n        }\n    ]\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/quizzes",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"quizzes"
+					]
+				},
+				"description": "It creates the first of 3 quizzes "
+			},
+			"response": []
+		},
+		{
+			"name": "03-Create the second quiz",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a3c89b81-34a0-4af6-b70c-37da3dd02c8d",
+						"exec": [
+							"pm.test(\"Create the second quiz\",function()",
+							"{",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.quiznumber).eql(1);",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"questions\": [\n        {\n            \"question\": \"Who's Wilma's husband?\",\n            \"answers\": [\n                {\n                    \"answer\": \"Fred\",\n                    \"correct\": 1\n                },\n                {\n                    \"answer\": \"Barney\",\n                    \"correct\": 0\n                },\n                {\n                    \"answer\": \"Dyno\",\n                    \"correct\": 0\n                }\n            ]\n        },\n        {\n            \"question\": \"Who's Fred's daughter?\",\n            \"answers\": [\n                {\n                    \"answer\": \"Wilma\",\n                    \"correct\": 0\n                },\n                {\n                    \"answer\": \"Pebbles\",\n                    \"correct\": 1\n                },\n                {\n                    \"answer\": \"Betty\",\n                    \"correct\": 0\n                }\n            ]\n        },\n        {\n            \"question\": \"Who's Flintstones' pet?\",\n            \"answers\": [\n                {\n                    \"answer\": \"Dyno\",\n                    \"correct\": 1\n                },\n                {\n                    \"answer\": \"Brontosaure\",\n                    \"correct\": 0\n                },\n                {\n                    \"answer\": \"BamBam\",\n                    \"correct\": 0\n                }\n            ]\n        }\n    ]\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/quizzes",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"quizzes"
+					]
+				},
+				"description": "Creating the second quiz: numberofquizzes must be 1\n"
+			},
+			"response": []
+		},
+		{
+			"name": "04-Create the third quiz",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "5c3f2eaa-0063-4040-8452-29838fe5211d",
+						"exec": [
+							"pm.test(\"Create the third quiz\",function()",
+							"{",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.quiznumber).eql(2);",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"questions\": [\n        {\n            \"question\": \"Who's Wilma's husband?\",\n            \"answers\": [\n                {\n                    \"answer\": \"Fred\",\n                    \"correct\": 1\n                },\n                {\n                    \"answer\": \"Barney\",\n                    \"correct\": 0\n                },\n                {\n                    \"answer\": \"Dyno\",\n                    \"correct\": 0\n                }\n            ]\n        },\n        {\n            \"question\": \"Who's Fred's daughter?\",\n            \"answers\": [\n                {\n                    \"answer\": \"Wilma\",\n                    \"correct\": 0\n                },\n                {\n                    \"answer\": \"Pebbles\",\n                    \"correct\": 1\n                },\n                {\n                    \"answer\": \"Betty\",\n                    \"correct\": 0\n                }\n            ]\n        },\n        {\n            \"question\": \"Who's Flintstones' pet?\",\n            \"answers\": [\n                {\n                    \"answer\": \"Dyno\",\n                    \"correct\": 1\n                },\n                {\n                    \"answer\": \"Brontosaure\",\n                    \"correct\": 0\n                },\n                {\n                    \"answer\": \"BamBam\",\n                    \"correct\": 0\n                }\n            ]\n        }\n    ]\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/quizzes",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"quizzes"
+					]
+				},
+				"description": "Creating the third and last quiz.\nIn the reply quiznumber must be equal to 2"
+			},
+			"response": []
+		},
+		{
+			"name": "05-Retrieve the number of loaded quizzes",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "73599de4-e4e1-4e33-929b-c8c826fdaa10",
+						"exec": [
+							"pm.test(\"Get the number of loaded quizzes\",function()",
+							"{",
+							"    var jsonData = pm.response.json();",
+							"\tpm.expect(jsonData.loaded_quizzes).to.eql(3);",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/quizzes/loaded",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"quizzes",
+						"loaded"
+					]
+				},
+				"description": "Ask to the system to get the 3 previously loaded quizzes"
+			},
+			"response": []
+		},
+		{
+			"name": "06-Retrieve the text of loaded quizzes",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "d930c883-bedc-4ca5-a565-7fe88e35269f",
+						"exec": [
+							"pm.test(\"Get the text of active quizzes\",function()",
+							"{",
+							"    var jsonData = pm.response.json();",
+							"\tpm.expect(jsonData).to.eql({\"loadedquizzes\": [",
+							"                {",
+							"                    \"id\": 0,",
+							"                    \"questions\": [",
+							"                        {",
+							"                            \"answers\": [",
+							"                                {",
+							"                                    \"answer\": \"33\"",
+							"                                },",
+							"                                {",
+							"                                    \"answer\": \"42\"",
+							"                                },",
+							"                                {",
+							"                                    \"answer\": \"1\"",
+							"                                }",
+							"                            ],",
+							"                            \"question\": \"What's the answer to all questions?\"",
+							"                        },",
+							"                        {",
+							"                            \"answers\": [",
+							"                                {",
+							"                                    \"answer\": \"33\"",
+							"                                },",
+							"                                {",
+							"                                    \"answer\": \"42\"",
+							"                                },",
+							"                                {",
+							"                                    \"answer\": \"1\"",
+							"                                }",
+							"                            ],",
+							"                            \"question\": \"What's the answer to all questions?\"",
+							"                        }",
+							"                    ]",
+							"                },",
+							"                {",
+							"                    \"id\": 1,",
+							"                    \"questions\": [",
+							"                        {",
+							"                            \"answers\": [",
+							"                                {",
+							"                                    \"answer\": \"Fred\"",
+							"                                },",
+							"                                {",
+							"                                    \"answer\": \"Barney\"",
+							"                                },",
+							"                                {",
+							"                                    \"answer\": \"Dyno\"",
+							"                                }",
+							"                            ],",
+							"                            \"question\": \"Who's Wilma's husband?\"",
+							"                        },",
+							"                        {",
+							"                            \"answers\": [",
+							"                                {",
+							"                                    \"answer\": \"Wilma\"",
+							"                                },",
+							"                                {",
+							"                                    \"answer\": \"Pebbles\"",
+							"                                },",
+							"                                {",
+							"                                    \"answer\": \"Betty\"",
+							"                                }",
+							"                            ],",
+							"                            \"question\": \"Who's Fred's daughter?\"",
+							"                        },",
+							"                        {",
+							"                            \"answers\": [",
+							"                                {",
+							"                                    \"answer\": \"Dyno\"",
+							"                                },",
+							"                                {",
+							"                                    \"answer\": \"Brontosaure\"",
+							"                                },",
+							"                                {",
+							"                                    \"answer\": \"BamBam\"",
+							"                                }",
+							"                            ],",
+							"                            \"question\": \"Who's Flintstones' pet?\"",
+							"                        }",
+							"                    ]",
+							"                },",
+							"                {",
+							"                    \"id\": 2,",
+							"                    \"questions\": [",
+							"                        {",
+							"                            \"answers\": [",
+							"                                {",
+							"                                    \"answer\": \"Fred\"",
+							"                                },",
+							"                                {",
+							"                                    \"answer\": \"Barney\"",
+							"                                },",
+							"                                {",
+							"                                    \"answer\": \"Dyno\"",
+							"                                }",
+							"                            ],",
+							"                            \"question\": \"Who's Wilma's husband?\"",
+							"                        },",
+							"                        {",
+							"                            \"answers\": [",
+							"                                {",
+							"                                    \"answer\": \"Wilma\"",
+							"                                },",
+							"                                {",
+							"                                    \"answer\": \"Pebbles\"",
+							"                                },",
+							"                                {",
+							"                                    \"answer\": \"Betty\"",
+							"                                }",
+							"                            ],",
+							"                            \"question\": \"Who's Fred's daughter?\"",
+							"                        },",
+							"                        {",
+							"                            \"answers\": [",
+							"                                {",
+							"                                    \"answer\": \"Dyno\"",
+							"                                },",
+							"                                {",
+							"                                    \"answer\": \"Brontosaure\"",
+							"                                },",
+							"                                {",
+							"                                    \"answer\": \"BamBam\"",
+							"                                }",
+							"                            ],",
+							"                            \"question\": \"Who's Flintstones' pet?\"",
+							"                        }",
+							"                    ]",
+							"                }",
+							"            ]",
+							"        });",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/quizzes",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"quizzes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "07-Get quiz number 2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "1124d36f-b6dd-48d0-801c-fdc9deb9c690",
+						"exec": [
+							"pm.test(\"Get the text of quiz 2\",function()",
+							"{",
+							"    var jsonData = pm.response.json();",
+							"\tpm.expect(jsonData).to.eql({",
+							"            \"id\": 2,",
+							"            \"questions\": [",
+							"                {",
+							"                    \"answers\": [",
+							"                        {",
+							"                            \"answer\": \"Fred\"",
+							"                        },",
+							"                        {",
+							"                            \"answer\": \"Barney\"",
+							"                        },",
+							"                        {",
+							"                            \"answer\": \"Dyno\"",
+							"                        }",
+							"                    ],",
+							"                    \"question\": \"Who's Wilma's husband?\"",
+							"                },",
+							"                {",
+							"                    \"answers\": [",
+							"                        {",
+							"                            \"answer\": \"Wilma\"",
+							"                        },",
+							"                        {",
+							"                            \"answer\": \"Pebbles\"",
+							"                        },",
+							"                        {",
+							"                            \"answer\": \"Betty\"",
+							"                        }",
+							"                    ],",
+							"                    \"question\": \"Who's Fred's daughter?\"",
+							"                },",
+							"                {",
+							"                    \"answers\": [",
+							"                        {",
+							"                            \"answer\": \"Dyno\"",
+							"                        },",
+							"                        {",
+							"                            \"answer\": \"Brontosaure\"",
+							"                        },",
+							"                        {",
+							"                            \"answer\": \"BamBam\"",
+							"                        }",
+							"                    ],",
+							"                    \"question\": \"Who's Flintstones' pet?\"",
+							"                }",
+							"            ]",
+							"        });",
+							"    ",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/quiz/2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"quiz",
+						"2"
+					]
+				},
+				"description": "Get the quiz number 2. Check if the quiz is retrieved correctly"
+			},
+			"response": []
+		},
+		{
+			"name": "08-Get a non-existing quiz",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "f5ca6755-c491-4532-97c8-7bf40d143510",
+						"exec": [
+							"pm.test(\"Retrieve unknown quiz 12\", function () {",
+							"    pm.response.to.have.status(404);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/quiz/12",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"quiz",
+						"12"
+					]
+				},
+				"description": "Try to retrieve the unknown quiz number 12.\nThe system must return the status code 404."
+			},
+			"response": []
+		},
+		{
+			"name": "09-Get question #1 of quiz 2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c265338b-f898-47ae-b01d-56ae84c8dac1",
+						"exec": [
+							"pm.test(\"Get the question #1 of quiz #2\",function()",
+							"{",
+							"    var jsonData = pm.response.json();",
+							"\tpm.expect(jsonData).to.eql(",
+							"\t    {",
+							"            \"answers\": [",
+							"                {",
+							"                    \"answer\": \"Fred\"",
+							"                },",
+							"                {",
+							"                    \"answer\": \"Barney\"",
+							"                },",
+							"                {",
+							"                    \"answer\": \"Dyno\"",
+							"                }",
+							"            ],",
+							"            \"question\": \"Who's Wilma's husband?\"",
+							"        });",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/quiz/2/question",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"quiz",
+						"2",
+						"question"
+					]
+				},
+				"description": "Get the first question of quiz number 2.\nThe system must return the correct question"
+			},
+			"response": []
+		},
+		{
+			"name": "10-Give the correct answer to question #1 of quiz #2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "9b64cae3-2e76-4eb9-949e-48ad0847d0a6",
+						"exec": [
+							"pm.test(\"Send the correct answer to question #1 of quiz #2\",function()",
+							"{",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData).to.eql({\"msg\":1});",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/quiz/2/question/Fred",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"quiz",
+						"2",
+						"question",
+						"Fred"
+					]
+				},
+				"description": "Give the correct answer to the question #1 of quiz #2.\nThe system must recognize that the answer is correct and return:\n{\"msg\":1}. The status code must be 200"
+			},
+			"response": []
+		},
+		{
+			"name": "11-Get the next question of quiz #2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "2b1f2c98-0767-4bda-a7b8-dc1f1b2685c0",
+						"exec": [
+							"pm.test(\"Get question #2 of quiz #2\",function()",
+							"{",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData).to.eql(",
+							"        {",
+							"            \"answers\": [",
+							"                {",
+							"                    \"answer\": \"Wilma\"",
+							"                },",
+							"                {",
+							"                    \"answer\": \"Pebbles\"",
+							"                },",
+							"                {",
+							"                    \"answer\": \"Betty\"",
+							"                }",
+							"            ],",
+							"            \"question\": \"Who's Fred's daughter?\"",
+							"        });",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/quiz/2/question",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"quiz",
+						"2",
+						"question"
+					]
+				},
+				"description": "Retrieve the question #2 of quiz #2.\nThe system must return the correct question."
+			},
+			"response": []
+		},
+		{
+			"name": "12- Give correct answer to question #2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "7d0511c6-e66d-46b5-9e5c-0082fdd40c6c",
+						"exec": [
+							"pm.test(\"Send the correct answer to question #2 of quiz #2\",function()",
+							"{",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData).to.eql({\"msg\":2});",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/quiz/2/question/Pebbles",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"quiz",
+						"2",
+						"question",
+						"Pebbles"
+					]
+				},
+				"description": "Send the right answer to question #2.\nThe system must return {\"msg\":2} and the status 200"
+			},
+			"response": []
+		},
+		{
+			"name": "13-Give the last answer correctly: Win",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "f0894332-71d5-4dc6-baf8-8c337031e064",
+						"exec": [
+							"pm.test(\"Send the correct answer to question #2 of quiz #2\",function()",
+							"{",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData).to.eql({\"msg\":\"you won 1 million clams!\"});",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/quiz/2/question/Dyno",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"quiz",
+						"2",
+						"question",
+						"Dyno"
+					]
+				},
+				"description": "Give the last answer of quiz #2 and win 1 million of dollars!\nThe system must return {\"msg\": \"you won 1 million clams!\"} and status code 200"
+			},
+			"response": []
+		},
+		{
+			"name": "14-Request another question to completed quiz #2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "42038da8-0fa8-416d-975a-d512e063ae0d",
+						"exec": [
+							"pm.test(\"Get a question of completed quiz #2\",function()",
+							"{",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData).to.eql({\"msg\":\"completed quiz\"});",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/quiz/2/question",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"quiz",
+						"2",
+						"question"
+					]
+				},
+				"description": "Double call to a completed quiz.\nThe system must return {\"msg\":\"completed quiz\"} and status code 200"
+			},
+			"response": []
+		},
+		{
+			"name": "15-Answer to a completed quiz",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "e2dd33ac-d062-4cb1-b0c8-a3bdd6b87563",
+						"exec": [
+							"pm.test(\"Put an answer to the completed quiz #2\",function()",
+							"{",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData).to.eql({\"msg\":\"completed quiz\"});",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/quiz/2/question/ciao",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"quiz",
+						"2",
+						"question",
+						"ciao"
+					]
+				},
+				"description": "Put an answer to a quiz that's already completed.\nThe system must return {\"msg\":\"completed quiz\"} and status 200"
+			},
+			"response": []
+		},
+		{
+			"name": "16-Put  a non existing answer to a question",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "23416f3d-27a2-427a-be0e-30cee2a73581",
+						"exec": [
+							"pm.test(\"Put a non-existing answer to the first question of quiz #1\",function()",
+							"{",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData).to.eql({\"msg\":\"non-existing answer!\"});",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/quiz/1/question/35",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"quiz",
+						"1",
+						"question",
+						"35"
+					]
+				},
+				"description": "Put an answer that it isn't listed between the valid options.\nAnswer 35 to the first question of quiz #1.\nThe system must return {\"msg\":\"non-existing answer!\"} and status code 200\n"
+			},
+			"response": []
+		},
+		{
+			"name": "17-Correct answer to question #1 of quiz #0",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "6a3d9291-694b-467e-8613-8160213fbec9",
+						"exec": [
+							"pm.test(\"Correct answer to question #1 of quiz #0\",function()",
+							"{",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData).to.eql({\"msg\":1});",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/quiz/0/question/42",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"quiz",
+						"0",
+						"question",
+						"42"
+					]
+				},
+				"description": "Give the correct answer 42 to the first question of quiz 0.\nThe system must return {\"msg\":1} and status 200"
+			},
+			"response": []
+		},
+		{
+			"name": "18-Wrong answer to question #2 of quiz #0",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "86617686-258a-4f37-acfa-0b75030fcfb5",
+						"exec": [
+							"pm.test(\"Wrong answer to question #2 of quiz #0\",function()",
+							"{",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData).to.eql({\"msg\":\"you lost!\"});",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/quiz/0/question/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"quiz",
+						"0",
+						"question",
+						"1"
+					]
+				},
+				"description": "Give the wrong answer 1 to question #2 of quiz #0\nThe system must return {\"msg\":\"you lost!\"} and status 200\n"
+			},
+			"response": []
+		},
+		{
+			"name": "19-Answer to an already lost quiz",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "e9a956a4-97b4-483a-b504-80d10e256851",
+						"exec": [
+							"pm.test(\"Answer to the lost quiz #0\",function()",
+							"{",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData).to.eql({\"msg\":\"you lost!\"});",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/quiz/0/question/21",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"quiz",
+						"0",
+						"question",
+						"21"
+					]
+				},
+				"description": "Answer 21 to quiz #0.\nThe system must return {\"msg\":\"you lost!\"} and status 200"
+			},
+			"response": []
+		},
+		{
+			"name": "20-Request a question of a lost quiz",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "b10e2aab-c001-4e8b-9d89-f6df06c70fb0",
+						"exec": [
+							"pm.test(\"Get a question from the lost quiz #0\",function()",
+							"{",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData).to.eql({\"msg\":\"you lost!\"});",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/quiz/0/question",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"quiz",
+						"0",
+						"question"
+					]
+				},
+				"description": "Get a question from the lost quiz #0.\nThe system must return {\"msg\":\"you lost!\"} and status 200"
+			},
+			"response": []
+		},
+		{
+			"name": "21-Delete quiz #2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "99137015-f1be-42dc-888f-517ab2d6b560",
+						"exec": [
+							"pm.test(\"Delete quiz #2\",function()",
+							"{",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData).to.eql({",
+							"            \"answered_questions\": 4,",
+							"            \"total_questions\": 3});",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"",
+							"",
+							"",
+							"",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/quiz/2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"quiz",
+						"2"
+					]
+				},
+				"description": "Delete the quiz 2.\nThe system must return{\n            \"answered_questions\": 4,\n            \"total_questions\": 3}\nand status code 200"
+			},
+			"response": []
+		},
+		{
+			"name": "22-Check there are 2 loaded quizzes",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "9d08f006-7272-4634-91b2-a0d09fd40bf9",
+						"exec": [
+							"pm.test(\"Get the number of loaded quizzes\",function()",
+							"{",
+							"    var jsonData = pm.response.json();",
+							"\tpm.expect(jsonData.loaded_quizzes).to.eql(2);",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/quizzes/loaded",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"quizzes",
+						"loaded"
+					]
+				},
+				"description": "Check that there are still 2 quizzes in the system after the delete operation.\nThe system must return body['loaded_quizzes']= 2 and status 200"
+			},
+			"response": []
+		},
+		{
+			"name": "23-Retrieve the text of the 2 remaining quizzes",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "bcd7a736-7168-49a1-8d97-6e93927c97ba",
+						"exec": [
+							"pm.test(\"Retrieve the text of loaded quizzes\",function()",
+							"{",
+							"    var jsonData = pm.response.json();",
+							"\tpm.expect(jsonData).to.eql(",
+							"\t     {",
+							"            \"loadedquizzes\": [",
+							"                {",
+							"                    \"id\": 0,",
+							"                    \"questions\": [",
+							"                        {",
+							"                            \"answers\": [",
+							"                                {",
+							"                                    \"answer\": \"33\"",
+							"                                },",
+							"                                {",
+							"                                    \"answer\": \"42\"",
+							"                                },",
+							"                                {",
+							"                                    \"answer\": \"1\"",
+							"                                }",
+							"                            ],",
+							"                            \"question\": \"What's the answer to all questions?\"",
+							"                        },",
+							"                        {",
+							"                            \"answers\": [",
+							"                                {",
+							"                                    \"answer\": \"33\"",
+							"                                },",
+							"                                {",
+							"                                    \"answer\": \"42\"",
+							"                                },",
+							"                                {",
+							"                                    \"answer\": \"1\"",
+							"                                }",
+							"                            ],",
+							"                            \"question\": \"What's the answer to all questions?\"",
+							"                        }",
+							"                    ]",
+							"                },",
+							"                {",
+							"                    \"id\": 1,",
+							"                    \"questions\": [",
+							"                        {",
+							"                            \"answers\": [",
+							"                                {",
+							"                                    \"answer\": \"Fred\"",
+							"                                },",
+							"                                {",
+							"                                    \"answer\": \"Barney\"",
+							"                                },",
+							"                                {",
+							"                                    \"answer\": \"Dyno\"",
+							"                                }",
+							"                            ],",
+							"                            \"question\": \"Who's Wilma's husband?\"",
+							"                        },",
+							"                        {",
+							"                            \"answers\": [",
+							"                                {",
+							"                                    \"answer\": \"Wilma\"",
+							"                                },",
+							"                                {",
+							"                                    \"answer\": \"Pebbles\"",
+							"                                },",
+							"                                {",
+							"                                    \"answer\": \"Betty\"",
+							"                                }",
+							"                            ],",
+							"                            \"question\": \"Who's Fred's daughter?\"",
+							"                        },",
+							"                        {",
+							"                            \"answers\": [",
+							"                                {",
+							"                                    \"answer\": \"Dyno\"",
+							"                                },",
+							"                                {",
+							"                                    \"answer\": \"Brontosaure\"",
+							"                                },",
+							"                                {",
+							"                                    \"answer\": \"BamBam\"",
+							"                                }",
+							"                            ],",
+							"                            \"question\": \"Who's Flintstones' pet?\"",
+							"                        }",
+							"                    ]",
+							"                }",
+							"            ]",
+							"        });",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/quizzes",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"quizzes"
+					]
+				},
+				"description": "Get the text of the 2 loaded quizzes.\nThe system must return \n {\n            \"loadedquizzes\": [\n                {\n                    \"id\": 0,\n                    \"questions\": [\n                        {\n                            \"answers\": [\n                                {\n                                    \"answer\": \"33\"\n                                },\n                                {\n                                    \"answer\": \"42\"\n                                },\n                                {\n                                    \"answer\": \"1\"\n                                }\n                            ],\n                            \"question\": \"What's the answer to all questions?\"\n                        },\n                        {\n                            \"answers\": [\n                                {\n                                    \"answer\": \"33\"\n                                },\n                                {\n                                    \"answer\": \"42\"\n                                },\n                                {\n                                    \"answer\": \"1\"\n                                }\n                            ],\n                            \"question\": \"What's the answer to all questions?\"\n                        }\n                    ]\n                },\n                {\n                    \"id\": 1,\n                    \"questions\": [\n                        {\n                            \"answers\": [\n                                {\n                                    \"answer\": \"Fred\"\n                                },\n                                {\n                                    \"answer\": \"Barney\"\n                                },\n                                {\n                                    \"answer\": \"Dyno\"\n                                }\n                            ],\n                            \"question\": \"Who's Wilma's husband?\"\n                        },\n                        {\n                            \"answers\": [\n                                {\n                                    \"answer\": \"Wilma\"\n                                },\n                                {\n                                    \"answer\": \"Pebbles\"\n                                },\n                                {\n                                    \"answer\": \"Betty\"\n                                }\n                            ],\n                            \"question\": \"Who's Fred's daughter?\"\n                        },\n                        {\n                            \"answers\": [\n                                {\n                                    \"answer\": \"Dyno\"\n                                },\n                                {\n                                    \"answer\": \"Brontosaure\"\n                                },\n                                {\n                                    \"answer\": \"BamBam\"\n                                }\n                            ],\n                            \"question\": \"Who's Flintstones' pet?\"\n                        }\n                    ]\n                }\n            ]\n        }\n        \n    and status code 200"
+			},
+			"response": []
+		},
+		{
+			"name": "24-Try to delete an already deleted quiz",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "997a24f0-ede8-4a11-b17c-ee64c3523854",
+						"exec": [
+							"pm.test(\"Try deleting another time quiz #2\",function()",
+							"{",
+							"    var jsonData = pm.response.json();",
+							"    pm.response.to.have.status(410);",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/quiz/2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"quiz",
+						"2"
+					]
+				},
+				"description": "Delete another time the quiz #2.\nThe system must return the status 410"
+			},
+			"response": []
+		},
+		{
+			"name": "25-Try to delete a non-existing quiz",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "44508384-c171-4a00-aadf-1198382eade6",
+						"exec": [
+							"pm.test(\"Try non-existing quiz #12\",function()",
+							"{",
+							"    var jsonData = pm.response.json();",
+							"    pm.response.to.have.status(404);",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/quiz/12",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"quiz",
+						"12"
+					]
+				},
+				"description": "Delete the non-existing quiz #12\nThe system must return the status 404"
+			},
+			"response": []
+		},
+		{
+			"name": "26-Try to get a deleted quiz",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "aa7862ee-0650-41c2-bd77-0c23d97b520c",
+						"exec": [
+							"pm.test(\"Try to get the deleted quiz #2\",function()",
+							"{",
+							"    var jsonData = pm.response.json();",
+							"    pm.response.to.have.status(410);",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/quiz/2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"quiz",
+						"2"
+					]
+				},
+				"description": "Get the text of the deleted quiz #2\nThe system must return the status code 410"
+			},
+			"response": []
+		},
+		{
+			"name": "27-Create a new quiz after the deletion",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "49f8ac06-37aa-4470-8707-d189e1470fe0",
+						"exec": [
+							"pm.test(\"Create a new quiz\",function()",
+							"{",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.quiznumber).eql(3);",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"questions\": [\n        {\n            \"question\": \"What's the answer to all questions?\",\n            \"answers\": [\n                {\n                    \"answer\": \"33\",\n                    \"correct\": 0\n                },\n                {\n                    \"answer\": \"42\",\n                    \"correct\": 1\n                },\n                {\n                    \"answer\": \"1\",\n                    \"correct\": 0\n                }\n            ]\n        },\n        {\n            \"question\": \"What's the answer to all questions?\",\n            \"answers\": [\n                {\n                    \"answer\": \"33\",\n                    \"correct\": 0\n                },\n                {\n                    \"answer\": \"42\",\n                    \"correct\": 1\n                },\n                {\n                    \"answer\": \"1\",\n                    \"correct\": 0\n                }\n            ]\n        }\n    ]\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/quizzes",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"quizzes"
+					]
+				},
+				"description": "Create a new quiz after having deleted an old one.\nThe new quiz must have id = 3.\nThe system must return body[\"quiznumber\"] = 3"
+			},
+			"response": []
+		},
+		{
+			"name": "28-Get the text of all quizzes",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "3b828f69-1a36-447c-b04e-9b925285b7a3",
+						"exec": [
+							"pm.test(\"Get the text of active quizzes\",function()",
+							"{",
+							"    var jsonData = pm.response.json();",
+							"\tpm.expect(jsonData).to.eql(",
+							"\t    {",
+							"            \"loadedquizzes\": [",
+							"                {",
+							"                    \"id\": 0,",
+							"                    \"questions\": [",
+							"                        {",
+							"                            \"answers\": [",
+							"                                {",
+							"                                    \"answer\": \"33\"",
+							"                                },",
+							"                                {",
+							"                                    \"answer\": \"42\"",
+							"                                },",
+							"                                {",
+							"                                    \"answer\": \"1\"",
+							"                                }",
+							"                            ],",
+							"                            \"question\": \"What's the answer to all questions?\"",
+							"                        },",
+							"                        {",
+							"                            \"answers\": [",
+							"                                {",
+							"                                    \"answer\": \"33\"",
+							"                                },",
+							"                                {",
+							"                                    \"answer\": \"42\"",
+							"                                },",
+							"                                {",
+							"                                    \"answer\": \"1\"",
+							"                                }",
+							"                            ],",
+							"                            \"question\": \"What's the answer to all questions?\"",
+							"                        }",
+							"                    ]",
+							"                },",
+							"                {",
+							"                    \"id\": 1,",
+							"                    \"questions\": [",
+							"                        {",
+							"                            \"answers\": [",
+							"                                {",
+							"                                    \"answer\": \"Fred\"",
+							"                                },",
+							"                                {",
+							"                                    \"answer\": \"Barney\"",
+							"                                },",
+							"                                {",
+							"                                    \"answer\": \"Dyno\"",
+							"                                }",
+							"                            ],",
+							"                            \"question\": \"Who's Wilma's husband?\"",
+							"                        },",
+							"                        {",
+							"                            \"answers\": [",
+							"                                {",
+							"                                    \"answer\": \"Wilma\"",
+							"                                },",
+							"                                {",
+							"                                    \"answer\": \"Pebbles\"",
+							"                                },",
+							"                                {",
+							"                                    \"answer\": \"Betty\"",
+							"                                }",
+							"                            ],",
+							"                            \"question\": \"Who's Fred's daughter?\"",
+							"                        },",
+							"                        {",
+							"                            \"answers\": [",
+							"                                {",
+							"                                    \"answer\": \"Dyno\"",
+							"                                },",
+							"                                {",
+							"                                    \"answer\": \"Brontosaure\"",
+							"                                },",
+							"                                {",
+							"                                    \"answer\": \"BamBam\"",
+							"                                }",
+							"                            ],",
+							"                            \"question\": \"Who's Flintstones' pet?\"",
+							"                        }",
+							"                    ]",
+							"                },",
+							"                {",
+							"                    \"id\": 3,",
+							"                    \"questions\": [",
+							"                        {",
+							"                            \"answers\": [",
+							"                                {",
+							"                                    \"answer\": \"33\"",
+							"                                },",
+							"                                {",
+							"                                    \"answer\": \"42\"",
+							"                                },",
+							"                                {",
+							"                                    \"answer\": \"1\"",
+							"                                }",
+							"                            ],",
+							"                            \"question\": \"What's the answer to all questions?\"",
+							"                        },",
+							"                        {",
+							"                            \"answers\": [",
+							"                                {",
+							"                                    \"answer\": \"33\"",
+							"                                },",
+							"                                {",
+							"                                    \"answer\": \"42\"",
+							"                                },",
+							"                                {",
+							"                                    \"answer\": \"1\"",
+							"                                }",
+							"                            ],",
+							"                            \"question\": \"What's the answer to all questions?\"",
+							"                        }",
+							"                    ]",
+							"                }",
+							"            ]",
+							"        });",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/quizzes",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"quizzes"
+					]
+				},
+				"description": "Get the text of all the loaded quizzes in the system."
+			},
+			"response": []
+		},
+		{
+			"name": "29-Delete quiz#1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "0c966ae4-0fe2-40c2-ba1e-1fc721750edb",
+						"exec": [
+							"pm.test(\"Delete quiz #1\",function()",
+							"{",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData).to.eql({",
+							"            \"answered_questions\": 0,",
+							"            \"total_questions\": 3});",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"",
+							"",
+							"",
+							"",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/quiz/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"quiz",
+						"1"
+					]
+				},
+				"description": "Delete the quiz #1 from the system.\nThe system must return\n{\n            \"answered_questions\": 0,\n            \"total_questions\": 3\n}"
+			},
+			"response": []
+		}
+	]
+}

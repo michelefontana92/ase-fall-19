@@ -1,0 +1,1695 @@
+{
+	"id": "a47d90db-1e4f-45ca-a156-6926a0da5420",
+	"name": "Homework1-Tests",
+	"allTests": [],
+	"timestamp": "2019-10-15T17:39:02.936Z",
+	"collection_id": "f5bb3a35-b513-4b74-819c-bedde873402b",
+	"folder_id": 0,
+	"target_type": "collection",
+	"environment_id": "0",
+	"data": [],
+	"delay": 0,
+	"count": 1,
+	"collection": {
+		"id": "f5bb3a35-b513-4b74-819c-bedde873402b",
+		"name": "Homework1-Tests",
+		"description": "",
+		"auth": null,
+		"events": null,
+		"variables": [],
+		"order": [
+			"837244de-cab9-442b-a03a-2b39c8999738",
+			"c795ea12-18a2-47d1-b84f-4a2111ce49ce",
+			"af310778-29a8-4a10-a453-49bebb720e26",
+			"f782fbc7-edfd-429f-920e-c1dffdb9ab4e",
+			"5a4bbb40-761b-4296-bae5-14a8691102da",
+			"cafcda10-3704-420a-97f3-b2c7469e4e54",
+			"448c5b5d-316b-44b9-a628-afc52881a494",
+			"29b9eee7-2bf5-438e-97fe-aa8951cb075b",
+			"34dc4a8b-8891-4a7a-8912-e9be33690066",
+			"1eb3c0b7-dced-48a8-947e-7e91fb73865a",
+			"36243fdb-1d93-485a-bc9f-a3e7ebba1774",
+			"224b9649-d52a-496c-9130-19849f253855",
+			"8fd90811-45c3-4e3d-adc3-e61932d752cb",
+			"16ed1062-036d-4bd0-b985-b9c9b2222969",
+			"188339de-9964-405d-80ad-1cacb1471e22",
+			"3a4ee52d-90b6-46d9-8012-fad488e81e06",
+			"437890a8-3004-4db4-b9f7-c4b00aec586f",
+			"2de078d7-e1c0-4945-a6a6-80151159acbf",
+			"881ebda7-482e-49e2-b719-4bad24af2ceb",
+			"746f3c4c-3171-4069-bebf-5c9560eb183a",
+			"5b1d45a1-8212-4de7-8e76-83d8ac2949d7",
+			"264d4b3f-4bb7-46c1-baab-b39100879ebc",
+			"f6d96fa8-0526-4dcd-ae78-cc9a1ab2ad03",
+			"c8ded719-a539-4afa-9781-c92075982a01",
+			"9a3caed4-47b5-4456-b84f-7f099156e7b6",
+			"b383a9f3-11f2-4e5c-9825-2172446b2e5d",
+			"d210f711-4158-4a82-b5ed-0dc2a4db0b5e",
+			"d26a48ae-f2e5-4cd9-bf2f-17fc18079c17",
+			"643d8e98-968c-426e-ad41-3bbb558eb930"
+		],
+		"folders_order": [],
+		"owner": "0",
+		"permissions": {},
+		"favorite": true,
+		"shared": false,
+		"type": "collection",
+		"depth": 0
+	},
+	"folder": null,
+	"environment": null,
+	"globals": null,
+	"results": [
+		{
+			"name": "1-No Quizzes ",
+			"id": "837244de-cab9-442b-a03a-2b39c8999738",
+			"url": "http://127.0.0.1:5000/quizzes/loaded",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"error": null,
+				"name": "At the beginning there aren't loaded quizzes",
+				"status": "pass"
+			},
+			"testPassFailCounts": {
+				"At the beginning there aren't loaded quizzes": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"12"
+			],
+			"allTests": [
+				{
+					"At the beginning there aren't loaded quizzes": true
+				}
+			],
+			"time": "12",
+			"totalRequestTime": "12",
+			"iterationResults": {}
+		},
+		{
+			"name": "2-Create the first quiz",
+			"id": "c795ea12-18a2-47d1-b84f-4a2111ce49ce",
+			"url": "http://127.0.0.1:5000/quizzes",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"error": null,
+				"name": "Create the first quiz",
+				"status": "pass"
+			},
+			"testPassFailCounts": {
+				"Create the first quiz": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"7"
+			],
+			"allTests": [
+				{
+					"Create the first quiz": true
+				}
+			],
+			"time": "7",
+			"totalRequestTime": "7",
+			"iterationResults": {}
+		},
+		{
+			"name": "03-Create the second quiz",
+			"id": "af310778-29a8-4a10-a453-49bebb720e26",
+			"url": "http://127.0.0.1:5000/quizzes",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"error": null,
+				"name": "Create the second quiz",
+				"status": "pass"
+			},
+			"testPassFailCounts": {
+				"Create the second quiz": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"7"
+			],
+			"allTests": [
+				{
+					"Create the second quiz": true
+				}
+			],
+			"time": "7",
+			"totalRequestTime": "7",
+			"iterationResults": {}
+		},
+		{
+			"name": "04-Create the third quiz",
+			"id": "f782fbc7-edfd-429f-920e-c1dffdb9ab4e",
+			"url": "http://127.0.0.1:5000/quizzes",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"error": null,
+				"name": "Create the third quiz",
+				"status": "pass"
+			},
+			"testPassFailCounts": {
+				"Create the third quiz": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"5"
+			],
+			"allTests": [
+				{
+					"Create the third quiz": true
+				}
+			],
+			"time": "5",
+			"totalRequestTime": "5",
+			"iterationResults": {}
+		},
+		{
+			"name": "05-Retrieve the number of loaded quizzes",
+			"id": "5a4bbb40-761b-4296-bae5-14a8691102da",
+			"url": "http://127.0.0.1:5000/quizzes/loaded",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"error": null,
+				"name": "Get the number of loaded quizzes",
+				"status": "pass"
+			},
+			"testPassFailCounts": {
+				"Get the number of loaded quizzes": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"6"
+			],
+			"allTests": [
+				{
+					"Get the number of loaded quizzes": true
+				}
+			],
+			"time": "6",
+			"totalRequestTime": "6",
+			"iterationResults": {}
+		},
+		{
+			"name": "06-Retrieve the text of loaded quizzes",
+			"id": "cafcda10-3704-420a-97f3-b2c7469e4e54",
+			"url": "http://127.0.0.1:5000/quizzes",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"error": null,
+				"name": "Get the text of active quizzes",
+				"status": "pass"
+			},
+			"testPassFailCounts": {
+				"Get the text of active quizzes": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"22"
+			],
+			"allTests": [
+				{
+					"Get the text of active quizzes": true
+				}
+			],
+			"time": "22",
+			"totalRequestTime": "22",
+			"iterationResults": {}
+		},
+		{
+			"name": "07-Get quiz number 2",
+			"id": "448c5b5d-316b-44b9-a628-afc52881a494",
+			"url": "http://127.0.0.1:5000/quiz/2",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"error": null,
+				"name": "Get the text of quiz 2",
+				"status": "pass"
+			},
+			"testPassFailCounts": {
+				"Get the text of quiz 2": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"16"
+			],
+			"allTests": [
+				{
+					"Get the text of quiz 2": true
+				}
+			],
+			"time": "16",
+			"totalRequestTime": "16",
+			"iterationResults": {}
+		},
+		{
+			"name": "08-Get a non-existing quiz",
+			"id": "29b9eee7-2bf5-438e-97fe-aa8951cb075b",
+			"url": "http://127.0.0.1:5000/quiz/12",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 404,
+				"name": "NOT FOUND",
+				"detail": {
+					"name": "Not Found",
+					"detail": "The requested resource could not be found but may be available again in the future. Subsequent requests by the client are permissible."
+				}
+			},
+			"tests": {
+				"error": null,
+				"name": "Retrieve unknown quiz 12",
+				"status": "pass"
+			},
+			"testPassFailCounts": {
+				"Retrieve unknown quiz 12": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"8"
+			],
+			"allTests": [
+				{
+					"Retrieve unknown quiz 12": true
+				}
+			],
+			"time": "8",
+			"totalRequestTime": "8",
+			"iterationResults": {}
+		},
+		{
+			"name": "09-Get question #1 of quiz 2",
+			"id": "34dc4a8b-8891-4a7a-8912-e9be33690066",
+			"url": "http://127.0.0.1:5000/quiz/2/question",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"error": null,
+				"name": "Get the question #1 of quiz #2",
+				"status": "pass"
+			},
+			"testPassFailCounts": {
+				"Get the question #1 of quiz #2": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"6"
+			],
+			"allTests": [
+				{
+					"Get the question #1 of quiz #2": true
+				}
+			],
+			"time": "6",
+			"totalRequestTime": "6",
+			"iterationResults": {}
+		},
+		{
+			"name": "10-Give the correct answer to question #1 of quiz #2",
+			"id": "1eb3c0b7-dced-48a8-947e-7e91fb73865a",
+			"url": "http://127.0.0.1:5000/quiz/2/question/Fred",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"error": null,
+				"name": "Send the correct answer to question #1 of quiz #2",
+				"status": "pass"
+			},
+			"testPassFailCounts": {
+				"Send the correct answer to question #1 of quiz #2": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"14"
+			],
+			"allTests": [
+				{
+					"Send the correct answer to question #1 of quiz #2": true
+				}
+			],
+			"time": "14",
+			"totalRequestTime": "14",
+			"iterationResults": {}
+		},
+		{
+			"name": "11-Get the next question of quiz #2",
+			"id": "36243fdb-1d93-485a-bc9f-a3e7ebba1774",
+			"url": "http://127.0.0.1:5000/quiz/2/question",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"error": null,
+				"name": "Get question #2 of quiz #2",
+				"status": "pass"
+			},
+			"testPassFailCounts": {
+				"Get question #2 of quiz #2": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"9"
+			],
+			"allTests": [
+				{
+					"Get question #2 of quiz #2": true
+				}
+			],
+			"time": "9",
+			"totalRequestTime": "9",
+			"iterationResults": {}
+		},
+		{
+			"name": "12- Give correct answer to question #2",
+			"id": "224b9649-d52a-496c-9130-19849f253855",
+			"url": "http://127.0.0.1:5000/quiz/2/question/Pebbles",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"error": null,
+				"name": "Send the correct answer to question #2 of quiz #2",
+				"status": "pass"
+			},
+			"testPassFailCounts": {
+				"Send the correct answer to question #2 of quiz #2": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"5"
+			],
+			"allTests": [
+				{
+					"Send the correct answer to question #2 of quiz #2": true
+				}
+			],
+			"time": "5",
+			"totalRequestTime": "5",
+			"iterationResults": {}
+		},
+		{
+			"name": "13-Give the last answer correctly: Win",
+			"id": "8fd90811-45c3-4e3d-adc3-e61932d752cb",
+			"url": "http://127.0.0.1:5000/quiz/2/question/Dyno",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"error": null,
+				"name": "Send the correct answer to question #2 of quiz #2",
+				"status": "pass"
+			},
+			"testPassFailCounts": {
+				"Send the correct answer to question #2 of quiz #2": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"8"
+			],
+			"allTests": [
+				{
+					"Send the correct answer to question #2 of quiz #2": true
+				}
+			],
+			"time": "8",
+			"totalRequestTime": "8",
+			"iterationResults": {}
+		},
+		{
+			"name": "14-Request another question to completed quiz #2",
+			"id": "16ed1062-036d-4bd0-b985-b9c9b2222969",
+			"url": "http://127.0.0.1:5000/quiz/2/question",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"error": null,
+				"name": "Get a question of completed quiz #2",
+				"status": "pass"
+			},
+			"testPassFailCounts": {
+				"Get a question of completed quiz #2": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"4"
+			],
+			"allTests": [
+				{
+					"Get a question of completed quiz #2": true
+				}
+			],
+			"time": "4",
+			"totalRequestTime": "4",
+			"iterationResults": {}
+		},
+		{
+			"name": "15-Answer to a completed quiz",
+			"id": "188339de-9964-405d-80ad-1cacb1471e22",
+			"url": "http://127.0.0.1:5000/quiz/2/question/ciao",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"error": null,
+				"name": "Put an answer to the completed quiz #2",
+				"status": "pass"
+			},
+			"testPassFailCounts": {
+				"Put an answer to the completed quiz #2": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"13"
+			],
+			"allTests": [
+				{
+					"Put an answer to the completed quiz #2": true
+				}
+			],
+			"time": "13",
+			"totalRequestTime": "13",
+			"iterationResults": {}
+		},
+		{
+			"name": "16-Put  a non existing answer to a question",
+			"id": "3a4ee52d-90b6-46d9-8012-fad488e81e06",
+			"url": "http://127.0.0.1:5000/quiz/1/question/35",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"error": null,
+				"name": "Put a non-existing answer to the first question of quiz #1",
+				"status": "pass"
+			},
+			"testPassFailCounts": {
+				"Put a non-existing answer to the first question of quiz #1": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"22"
+			],
+			"allTests": [
+				{
+					"Put a non-existing answer to the first question of quiz #1": true
+				}
+			],
+			"time": "22",
+			"totalRequestTime": "22",
+			"iterationResults": {}
+		},
+		{
+			"name": "17-Correct answer to question #1 of quiz #0",
+			"id": "437890a8-3004-4db4-b9f7-c4b00aec586f",
+			"url": "http://127.0.0.1:5000/quiz/0/question/42",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"error": null,
+				"name": "Correct answer to question #1 of quiz #0",
+				"status": "pass"
+			},
+			"testPassFailCounts": {
+				"Correct answer to question #1 of quiz #0": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"5"
+			],
+			"allTests": [
+				{
+					"Correct answer to question #1 of quiz #0": true
+				}
+			],
+			"time": "5",
+			"totalRequestTime": "5",
+			"iterationResults": {}
+		},
+		{
+			"name": "18-Wrong answer to question #2 of quiz #0",
+			"id": "2de078d7-e1c0-4945-a6a6-80151159acbf",
+			"url": "http://127.0.0.1:5000/quiz/0/question/1",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"error": null,
+				"name": "Wrong answer to question #2 of quiz #0",
+				"status": "pass"
+			},
+			"testPassFailCounts": {
+				"Wrong answer to question #2 of quiz #0": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"5"
+			],
+			"allTests": [
+				{
+					"Wrong answer to question #2 of quiz #0": true
+				}
+			],
+			"time": "5",
+			"totalRequestTime": "5",
+			"iterationResults": {}
+		},
+		{
+			"name": "19-Answer to an already lost quiz",
+			"id": "881ebda7-482e-49e2-b719-4bad24af2ceb",
+			"url": "http://127.0.0.1:5000/quiz/0/question/21",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"error": null,
+				"name": "Answer to the lost quiz #0",
+				"status": "pass"
+			},
+			"testPassFailCounts": {
+				"Answer to the lost quiz #0": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"5"
+			],
+			"allTests": [
+				{
+					"Answer to the lost quiz #0": true
+				}
+			],
+			"time": "5",
+			"totalRequestTime": "5",
+			"iterationResults": {}
+		},
+		{
+			"name": "20-Request a question of a lost quiz",
+			"id": "746f3c4c-3171-4069-bebf-5c9560eb183a",
+			"url": "http://127.0.0.1:5000/quiz/0/question",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"error": null,
+				"name": "Get a question from the lost quiz #0",
+				"status": "pass"
+			},
+			"testPassFailCounts": {
+				"Get a question from the lost quiz #0": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"17"
+			],
+			"allTests": [
+				{
+					"Get a question from the lost quiz #0": true
+				}
+			],
+			"time": "17",
+			"totalRequestTime": "17",
+			"iterationResults": {}
+		},
+		{
+			"name": "21-Delete quiz #2",
+			"id": "5b1d45a1-8212-4de7-8e76-83d8ac2949d7",
+			"url": "http://127.0.0.1:5000/quiz/2",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"error": null,
+				"name": "Delete quiz #2",
+				"status": "pass"
+			},
+			"testPassFailCounts": {
+				"Delete quiz #2": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"6"
+			],
+			"allTests": [
+				{
+					"Delete quiz #2": true
+				}
+			],
+			"time": "6",
+			"totalRequestTime": "6",
+			"iterationResults": {}
+		},
+		{
+			"name": "22-Check there are 2 loaded quizzes",
+			"id": "264d4b3f-4bb7-46c1-baab-b39100879ebc",
+			"url": "http://127.0.0.1:5000/quizzes/loaded",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"error": null,
+				"name": "Get the number of loaded quizzes",
+				"status": "pass"
+			},
+			"testPassFailCounts": {
+				"Get the number of loaded quizzes": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"5"
+			],
+			"allTests": [
+				{
+					"Get the number of loaded quizzes": true
+				}
+			],
+			"time": "5",
+			"totalRequestTime": "5",
+			"iterationResults": {}
+		},
+		{
+			"name": "23-Retrieve the text of the 2 remaining quizzes",
+			"id": "f6d96fa8-0526-4dcd-ae78-cc9a1ab2ad03",
+			"url": "http://127.0.0.1:5000/quizzes",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"error": null,
+				"name": "Retrieve the text of loaded quizzes",
+				"status": "pass"
+			},
+			"testPassFailCounts": {
+				"Retrieve the text of loaded quizzes": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"5"
+			],
+			"allTests": [
+				{
+					"Retrieve the text of loaded quizzes": true
+				}
+			],
+			"time": "5",
+			"totalRequestTime": "5",
+			"iterationResults": {}
+		},
+		{
+			"name": "24-Try to delete an already deleted quiz",
+			"id": "c8ded719-a539-4afa-9781-c92075982a01",
+			"url": "http://127.0.0.1:5000/quiz/2",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 410,
+				"name": "GONE",
+				"detail": {
+					"name": "Gone",
+					"detail": "Indicates that the resource requested is no longer available and will not be available again. This should be used when a resource has been intentionally removed and the resource should be purged. Upon receiving a 410 status code, the client should not request the resource again in the future. Clients such as search engines should remove the resource from their indices. Most use cases do not require clients and search engines to purge the resource, and a \"404 Not Found\" may be used instead."
+				}
+			},
+			"tests": {
+				"error": null,
+				"name": "Try deleting another time quiz #2",
+				"status": "pass"
+			},
+			"testPassFailCounts": {
+				"Try deleting another time quiz #2": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"5"
+			],
+			"allTests": [
+				{
+					"Try deleting another time quiz #2": true
+				}
+			],
+			"time": "5",
+			"totalRequestTime": "5",
+			"iterationResults": {}
+		},
+		{
+			"name": "25-Try to delete a non-existing quiz",
+			"id": "9a3caed4-47b5-4456-b84f-7f099156e7b6",
+			"url": "http://127.0.0.1:5000/quiz/12",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 404,
+				"name": "NOT FOUND",
+				"detail": {
+					"name": "Not Found",
+					"detail": "The requested resource could not be found but may be available again in the future. Subsequent requests by the client are permissible."
+				}
+			},
+			"tests": {
+				"error": null,
+				"name": "Try non-existing quiz #12",
+				"status": "pass"
+			},
+			"testPassFailCounts": {
+				"Try non-existing quiz #12": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"6"
+			],
+			"allTests": [
+				{
+					"Try non-existing quiz #12": true
+				}
+			],
+			"time": "6",
+			"totalRequestTime": "6",
+			"iterationResults": {}
+		},
+		{
+			"name": "26-Try to get a deleted quiz",
+			"id": "b383a9f3-11f2-4e5c-9825-2172446b2e5d",
+			"url": "http://127.0.0.1:5000/quiz/2",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 410,
+				"name": "GONE",
+				"detail": {
+					"name": "Gone",
+					"detail": "Indicates that the resource requested is no longer available and will not be available again. This should be used when a resource has been intentionally removed and the resource should be purged. Upon receiving a 410 status code, the client should not request the resource again in the future. Clients such as search engines should remove the resource from their indices. Most use cases do not require clients and search engines to purge the resource, and a \"404 Not Found\" may be used instead."
+				}
+			},
+			"tests": {
+				"error": null,
+				"name": "Try to get the deleted quiz #2",
+				"status": "pass"
+			},
+			"testPassFailCounts": {
+				"Try to get the deleted quiz #2": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"8"
+			],
+			"allTests": [
+				{
+					"Try to get the deleted quiz #2": true
+				}
+			],
+			"time": "8",
+			"totalRequestTime": "8",
+			"iterationResults": {}
+		},
+		{
+			"name": "27-Create a new quiz after the deletion",
+			"id": "d210f711-4158-4a82-b5ed-0dc2a4db0b5e",
+			"url": "http://127.0.0.1:5000/quizzes",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"error": null,
+				"name": "Create a new quiz",
+				"status": "pass"
+			},
+			"testPassFailCounts": {
+				"Create a new quiz": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"5"
+			],
+			"allTests": [
+				{
+					"Create a new quiz": true
+				}
+			],
+			"time": "5",
+			"totalRequestTime": "5",
+			"iterationResults": {}
+		},
+		{
+			"name": "28-Get the text of all quizzes",
+			"id": "d26a48ae-f2e5-4cd9-bf2f-17fc18079c17",
+			"url": "http://127.0.0.1:5000/quizzes",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"error": null,
+				"name": "Get the text of active quizzes",
+				"status": "pass"
+			},
+			"testPassFailCounts": {
+				"Get the text of active quizzes": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"5"
+			],
+			"allTests": [
+				{
+					"Get the text of active quizzes": true
+				}
+			],
+			"time": "5",
+			"totalRequestTime": "5",
+			"iterationResults": {}
+		},
+		{
+			"name": "29-Delete quiz#1",
+			"id": "643d8e98-968c-426e-ad41-3bbb558eb930",
+			"url": "http://127.0.0.1:5000/quiz/1",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"error": null,
+				"name": "Delete quiz #1",
+				"status": "pass"
+			},
+			"testPassFailCounts": {
+				"Delete quiz #1": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"9"
+			],
+			"allTests": [
+				{
+					"Delete quiz #1": true
+				}
+			],
+			"time": "9",
+			"totalRequestTime": "9",
+			"iterationResults": {}
+		}
+	],
+	"totalPass": 29,
+	"totalFail": 0,
+	"totalTime": 250,
+	"lifecycle": "done",
+	"requests": [
+		{
+			"name": "1-No Quizzes ",
+			"id": "837244de-cab9-442b-a03a-2b39c8999738",
+			"url": "http://127.0.0.1:5000/quizzes/loaded",
+			"time": "2019-10-15T17:39:02.936Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"At the beginning there aren't loaded quizzes": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "2-Create the first quiz",
+			"id": "c795ea12-18a2-47d1-b84f-4a2111ce49ce",
+			"url": "http://127.0.0.1:5000/quizzes",
+			"time": "2019-10-15T17:39:02.936Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Create the first quiz": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "03-Create the second quiz",
+			"id": "af310778-29a8-4a10-a453-49bebb720e26",
+			"url": "http://127.0.0.1:5000/quizzes",
+			"time": "2019-10-15T17:39:02.936Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Create the second quiz": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "04-Create the third quiz",
+			"id": "f782fbc7-edfd-429f-920e-c1dffdb9ab4e",
+			"url": "http://127.0.0.1:5000/quizzes",
+			"time": "2019-10-15T17:39:02.936Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Create the third quiz": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "05-Retrieve the number of loaded quizzes",
+			"id": "5a4bbb40-761b-4296-bae5-14a8691102da",
+			"url": "http://127.0.0.1:5000/quizzes/loaded",
+			"time": "2019-10-15T17:39:02.936Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Get the number of loaded quizzes": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "06-Retrieve the text of loaded quizzes",
+			"id": "cafcda10-3704-420a-97f3-b2c7469e4e54",
+			"url": "http://127.0.0.1:5000/quizzes",
+			"time": "2019-10-15T17:39:02.936Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Get the text of active quizzes": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "07-Get quiz number 2",
+			"id": "448c5b5d-316b-44b9-a628-afc52881a494",
+			"url": "http://127.0.0.1:5000/quiz/2",
+			"time": "2019-10-15T17:39:02.936Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Get the text of quiz 2": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "08-Get a non-existing quiz",
+			"id": "29b9eee7-2bf5-438e-97fe-aa8951cb075b",
+			"url": "http://127.0.0.1:5000/quiz/12",
+			"time": "2019-10-15T17:39:02.936Z",
+			"responseCode": {
+				"code": 404,
+				"name": "NOT FOUND",
+				"detail": {
+					"name": "Not Found",
+					"detail": "The requested resource could not be found but may be available again in the future. Subsequent requests by the client are permissible."
+				}
+			},
+			"testPassFailCounts": {
+				"Retrieve unknown quiz 12": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "09-Get question #1 of quiz 2",
+			"id": "34dc4a8b-8891-4a7a-8912-e9be33690066",
+			"url": "http://127.0.0.1:5000/quiz/2/question",
+			"time": "2019-10-15T17:39:02.936Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Get the question #1 of quiz #2": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "10-Give the correct answer to question #1 of quiz #2",
+			"id": "1eb3c0b7-dced-48a8-947e-7e91fb73865a",
+			"url": "http://127.0.0.1:5000/quiz/2/question/Fred",
+			"time": "2019-10-15T17:39:02.936Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Send the correct answer to question #1 of quiz #2": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "11-Get the next question of quiz #2",
+			"id": "36243fdb-1d93-485a-bc9f-a3e7ebba1774",
+			"url": "http://127.0.0.1:5000/quiz/2/question",
+			"time": "2019-10-15T17:39:02.936Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Get question #2 of quiz #2": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "12- Give correct answer to question #2",
+			"id": "224b9649-d52a-496c-9130-19849f253855",
+			"url": "http://127.0.0.1:5000/quiz/2/question/Pebbles",
+			"time": "2019-10-15T17:39:02.936Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Send the correct answer to question #2 of quiz #2": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "13-Give the last answer correctly: Win",
+			"id": "8fd90811-45c3-4e3d-adc3-e61932d752cb",
+			"url": "http://127.0.0.1:5000/quiz/2/question/Dyno",
+			"time": "2019-10-15T17:39:02.936Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Send the correct answer to question #2 of quiz #2": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "14-Request another question to completed quiz #2",
+			"id": "16ed1062-036d-4bd0-b985-b9c9b2222969",
+			"url": "http://127.0.0.1:5000/quiz/2/question",
+			"time": "2019-10-15T17:39:02.936Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Get a question of completed quiz #2": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "15-Answer to a completed quiz",
+			"id": "188339de-9964-405d-80ad-1cacb1471e22",
+			"url": "http://127.0.0.1:5000/quiz/2/question/ciao",
+			"time": "2019-10-15T17:39:02.936Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Put an answer to the completed quiz #2": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "16-Put  a non existing answer to a question",
+			"id": "3a4ee52d-90b6-46d9-8012-fad488e81e06",
+			"url": "http://127.0.0.1:5000/quiz/1/question/35",
+			"time": "2019-10-15T17:39:02.936Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Put a non-existing answer to the first question of quiz #1": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "17-Correct answer to question #1 of quiz #0",
+			"id": "437890a8-3004-4db4-b9f7-c4b00aec586f",
+			"url": "http://127.0.0.1:5000/quiz/0/question/42",
+			"time": "2019-10-15T17:39:02.936Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Correct answer to question #1 of quiz #0": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "18-Wrong answer to question #2 of quiz #0",
+			"id": "2de078d7-e1c0-4945-a6a6-80151159acbf",
+			"url": "http://127.0.0.1:5000/quiz/0/question/1",
+			"time": "2019-10-15T17:39:02.936Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Wrong answer to question #2 of quiz #0": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "19-Answer to an already lost quiz",
+			"id": "881ebda7-482e-49e2-b719-4bad24af2ceb",
+			"url": "http://127.0.0.1:5000/quiz/0/question/21",
+			"time": "2019-10-15T17:39:02.936Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Answer to the lost quiz #0": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "20-Request a question of a lost quiz",
+			"id": "746f3c4c-3171-4069-bebf-5c9560eb183a",
+			"url": "http://127.0.0.1:5000/quiz/0/question",
+			"time": "2019-10-15T17:39:02.936Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Get a question from the lost quiz #0": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "21-Delete quiz #2",
+			"id": "5b1d45a1-8212-4de7-8e76-83d8ac2949d7",
+			"url": "http://127.0.0.1:5000/quiz/2",
+			"time": "2019-10-15T17:39:02.936Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Delete quiz #2": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "22-Check there are 2 loaded quizzes",
+			"id": "264d4b3f-4bb7-46c1-baab-b39100879ebc",
+			"url": "http://127.0.0.1:5000/quizzes/loaded",
+			"time": "2019-10-15T17:39:02.936Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Get the number of loaded quizzes": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "23-Retrieve the text of the 2 remaining quizzes",
+			"id": "f6d96fa8-0526-4dcd-ae78-cc9a1ab2ad03",
+			"url": "http://127.0.0.1:5000/quizzes",
+			"time": "2019-10-15T17:39:02.936Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Retrieve the text of loaded quizzes": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "24-Try to delete an already deleted quiz",
+			"id": "c8ded719-a539-4afa-9781-c92075982a01",
+			"url": "http://127.0.0.1:5000/quiz/2",
+			"time": "2019-10-15T17:39:02.936Z",
+			"responseCode": {
+				"code": 410,
+				"name": "GONE",
+				"detail": {
+					"name": "Gone",
+					"detail": "Indicates that the resource requested is no longer available and will not be available again. This should be used when a resource has been intentionally removed and the resource should be purged. Upon receiving a 410 status code, the client should not request the resource again in the future. Clients such as search engines should remove the resource from their indices. Most use cases do not require clients and search engines to purge the resource, and a \"404 Not Found\" may be used instead."
+				}
+			},
+			"testPassFailCounts": {
+				"Try deleting another time quiz #2": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "25-Try to delete a non-existing quiz",
+			"id": "9a3caed4-47b5-4456-b84f-7f099156e7b6",
+			"url": "http://127.0.0.1:5000/quiz/12",
+			"time": "2019-10-15T17:39:02.936Z",
+			"responseCode": {
+				"code": 404,
+				"name": "NOT FOUND",
+				"detail": {
+					"name": "Not Found",
+					"detail": "The requested resource could not be found but may be available again in the future. Subsequent requests by the client are permissible."
+				}
+			},
+			"testPassFailCounts": {
+				"Try non-existing quiz #12": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "26-Try to get a deleted quiz",
+			"id": "b383a9f3-11f2-4e5c-9825-2172446b2e5d",
+			"url": "http://127.0.0.1:5000/quiz/2",
+			"time": "2019-10-15T17:39:02.936Z",
+			"responseCode": {
+				"code": 410,
+				"name": "GONE",
+				"detail": {
+					"name": "Gone",
+					"detail": "Indicates that the resource requested is no longer available and will not be available again. This should be used when a resource has been intentionally removed and the resource should be purged. Upon receiving a 410 status code, the client should not request the resource again in the future. Clients such as search engines should remove the resource from their indices. Most use cases do not require clients and search engines to purge the resource, and a \"404 Not Found\" may be used instead."
+				}
+			},
+			"testPassFailCounts": {
+				"Try to get the deleted quiz #2": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "27-Create a new quiz after the deletion",
+			"id": "d210f711-4158-4a82-b5ed-0dc2a4db0b5e",
+			"url": "http://127.0.0.1:5000/quizzes",
+			"time": "2019-10-15T17:39:02.936Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Create a new quiz": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "28-Get the text of all quizzes",
+			"id": "d26a48ae-f2e5-4cd9-bf2f-17fc18079c17",
+			"url": "http://127.0.0.1:5000/quizzes",
+			"time": "2019-10-15T17:39:02.936Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Get the text of active quizzes": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "29-Delete quiz#1",
+			"id": "643d8e98-968c-426e-ad41-3bbb558eb930",
+			"url": "http://127.0.0.1:5000/quiz/1",
+			"time": "2019-10-15T17:39:02.936Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Delete quiz #1": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		}
+	],
+	"synced": false
+}
